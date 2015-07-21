@@ -1,7 +1,7 @@
 {
   "name": "miel",
-  "version": "0.0.0",
-  "description": "a syntax extension for cleaner javascript",
+  "version": "0.0.1",
+  "description": "a syntax sweetener for javascript",
   "keywords": [
     "javascript",
     "syntax",
