@@ -38,7 +38,7 @@ Use [miel-loader](https://github.com/collardeau/miel-loader) to run for Webpack.
 
 ### {-} Wrap 
 
-The ```{-}``` syntax will wrap the code following it that is **more indented** than the line it is on.
+The ```{-}``` syntax will wrap the code following it that is **more indented** than the line it is on. It is a hyphen in between the brackets, which can be spaced out.
 
 ```{-}``` will also carry over comments, parenthesis, or a semi-colons that are on the same line after it. For example:
 
