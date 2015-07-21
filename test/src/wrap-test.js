@@ -16,6 +16,19 @@ describe('wraps code that is evoked by the special syntax', () => {
 
   });
 
+ it('works with windows carriages returns for indentation', () => {
+
+    input = ''+
+    '\r\njunk\r\n\r\n  function {-}\r\n    block\r\n    block\r\n\r\n  junk';
+    key = '' +
+    '\r\njunk\r\n\r\n  function {\r\n    block\r\n    block\n  }\r\n\r\n  junk';
+    // a \r is lost after the last block
+
+    compile(input).should.equal(key);
+
+  });
+
+
   it('works with tabs for indentation', () => {
 
     input = ''+
