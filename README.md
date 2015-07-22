@@ -1,11 +1,18 @@
 # Miel.js [![Build Status](https://travis-ci.org/collardeau/miel.svg?branch=master)](https://travis-ci.org/collardeau/miel)
-A sweetener for a more concise javaScript syntax.
+A javaScript pre-loader to add indentation syntax, (a la Sass or CoffeeScript).
+
+Check out the REPL:
+[https://rawgit.com/collardeau/Miel-REPL/master/public/index.html](https://rawgit.com/collardeau/Miel-REPL/master/public/index.html)
+
+The blog post (rant):
+[https://medium.com](https://medium.com/@collardeau/what-craziness-drove-me-to-write-a-javascript-syntax-extension-fadc04bd36e9)
+
 
 ## Usage
 
 ```javascript
 function translate(word) {-}
-    translation:= 'le ' + word
+    var translation = 'le ' + word
     if (word === 'miel') {-}
         translation = 'honey'
     return translation
@@ -15,7 +22,7 @@ compiles to:
 
 ```javascript
 function translate(word) {
-    var translation= 'le ' + word
+    var translation = 'le ' + word
     if (word === 'miel') {
         translation = 'honey'
     }
@@ -23,37 +30,38 @@ function translate(word) {
 }
 ```
 
-Miel does **two things**:
-* wraps code after ```{-}``` (based on indentation).
-* changes declarations from ```:=``` to ```var```
-
 ## Installation ##
 
 Use [gulp-miel](https://github.com/collardeau/gulp-miel) to run in a Gulp build.
 
-Use [miel-loader](https://github.com/collardeau/miel-loader) to run for Webpack.
+Use [miel-loader](https://github.com/collardeau/miel-loader) for a Webpack bundle.
 
+You can run these in tandem with Babel.
 
 ## Miel Syntax
 
 ### {-} Wrap 
 
-The ```{-}``` syntax will wrap the code following it that is **more indented** than the line it is on. It is a hyphen in between the brackets, which can be spaced out.
+The ```{-}``` syntax will wrap the code following it that is **more indented** than the line it is on. (It is a hyphen in between brackets). The hyphen can be spaced out: ```{ -  }``` and still be recognized by Miel.
 
-```{-}``` will also carry over comments, parenthesis, or a semi-colons that are on the same line after it. For example:
+```{-}``` carries over comments, parenthesis, or semi-colons that are on the same line after it. 
+For example:
 
 ```javascript
-$("button").click(function(){-});
-    doSomething();
+describe("works with indentation', () => {});
+    it('smartly knows when to wrap code');
+
 ```
+
 compiles to:
+
 ```javascript
-$("button").click(function(){
-  doSomething();
+describe("works with indentation', () => {
+    it('smartly knows when to wrap code');
 });
 ```
 
-```{-}``` can be used anywhere that needs bracket wrapping like with if statement or an object:
+```{-}``` can be used anywhere that needs bracket wrapping like with if statement, or for an object literal:
 
 ```javascript```
 if(true){-}
@@ -61,18 +69,18 @@ if(true){-}
 else {-}
   return false
 
-bee := {-};
+var bee = {-}
   family: 'Honey Bee',
   colonySize: 50000
   
 ```
-Miel does not touch semi-colons. You can have them in, or not, after ```{-}```.
+Miel does not touch semi-colons. You can have them in, or not, after ```{-}``` (and they will be carried down).
 
-```"{-}"``` (wrapped in single or double quotes) will never be invoked. Also, Miel will ignore any ```{-}``` with any characters but comment or punctuation behind it (as a safety for an invalid invocation). 
+``` "{-}" ``` (wrapped in single or double quotes) will never be invoked.
 
-### := Variable Declaration 
+## Experimental: Smalltalk Variable Declaration 
 
-Miel recognizes a variable declaration using the Smalltalk type syntax ```:=```, and it will convert it to a ```var``` declaration.
+Miel also recognizes a variable declaration using the Smalltalk type syntax ```:=```, and it will convert it to a ```var``` declaration.
 
 ```javascript
 syntax:= 'miel';
@@ -84,7 +92,7 @@ compiles to:
 var syntax= 'miel';
 var language = 'javaScript';
 ```
-### Conclusion
-Don't get bogged down counting and moving brackets, or letting var keywords clutter your view; so you can better focus on the task at hand!
+## Conclusion
+Don't get bogged down counting and moving brackets, and you can better focus on the task at hand!
   
   
