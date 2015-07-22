@@ -1,7 +1,7 @@
 {
   "name": "miel",
-  "version": "0.0.1",
-  "description": "a syntax sweetener for javascript",
+  "version": "0.0.2",
+  "description": "a syntax extension for javascript",
   "keywords": [
     "javascript",
     "syntax",
@@ -10,7 +10,7 @@
   "author": "Thomas Collardeau <thomas@collardeau.com>",
   "scripts": {
     "build-tests": "gulp build",
-    "test": "mocha test/lib",
+    "test": "mocha test/lib -w",
     "test-watch": "gulp watch"
   },
   "main": "index.js",
