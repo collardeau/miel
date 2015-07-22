@@ -38,6 +38,12 @@ describe("rewrites variable declarations from smalltalk syntax", function () {
     declare(input).should.equal(key);
   });
 
+  it("not phased by a number in the variable", function () {
+    input = "\nalbum4 := \"no code\"\n";
+    key = "\nvar album4 = \"no code\"\n";
+    declare(input).should.equal(key);
+  });
+
   it("ignores the call if there are two words in front of it", function () {
     input = "junk abc:= def;";
     declare(input).should.equal(input);
