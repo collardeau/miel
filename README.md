@@ -1,4 +1,6 @@
 # Miel.js [![Build Status](https://travis-ci.org/collardeau/miel.svg?branch=master)](https://travis-ci.org/collardeau/miel)
+
+[![Join the chat at https://gitter.im/collardeau/miel](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/collardeau/miel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A javaScript pre-loader to add indentation syntax, (a la Sass or CoffeeScript).
 
 Check out the REPL:
