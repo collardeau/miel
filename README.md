@@ -1,13 +1,14 @@
-# Miel.js [![Build Status](https://travis-ci.org/collardeau/miel.svg?branch=master)](https://travis-ci.org/collardeau/miel)
+# Miel.js 
+[![Build Status](https://travis-ci.org/collardeau/miel.svg?branch=master)](https://travis-ci.org/collardeau/miel) 
+[![Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/collardeau/miel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[![Join the chat at https://gitter.im/collardeau/miel](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/collardeau/miel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A javaScript pre-loader to add indentation syntax, (a la Sass or CoffeeScript).
 
 Check out the REPL:
 [https://rawgit.com/collardeau/Miel-REPL/master/public/index.html](https://rawgit.com/collardeau/Miel-REPL/master/public/index.html)
 
 The blog post (rant):
-[https://medium.com](https://medium.com/@collardeau/what-craziness-drove-me-to-write-a-javascript-syntax-extension-fadc04bd36e9)
+[https://medium.com/@collardeau/what-craziness-drove-me-to-write-a-javascript-syntax-extension-fadc04bd36e9](https://medium.com/@collardeau/what-craziness-drove-me-to-write-a-javascript-syntax-extension-fadc04bd36e9)
 
 
 ## Usage
@@ -76,9 +77,9 @@ var bee = {-}
   colonySize: 50000
   
 ```
-Miel does not touch semi-colons. You can have them in, or not, after ```{-}``` (and they will be carried down).
+Miel does not touch semi-colons. You can have them in, or not, after {-} (and they will be carried down).
 
-``` "{-}" ``` (wrapped in single or double quotes) will never be invoked.
+"{-}" (wrapped in single or double quotes) will never be invoked.
 
 ## Experimental: Smalltalk Variable Declaration 
 
