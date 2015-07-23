@@ -10,7 +10,7 @@
   "author": "Thomas Collardeau <thomas@collardeau.com>",
   "scripts": {
     "build-tests": "gulp build",
-    "test": "mocha test/lib -w",
+    "test": "mocha test/lib",
     "test-watch": "gulp watch"
   },
   "main": "index.js",
