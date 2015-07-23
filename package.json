@@ -10,7 +10,8 @@
   "author": "Thomas Collardeau <thomas@collardeau.com>",
   "scripts": {
     "test": "mocha --reporter spec",
-    "dev": "mocha -w"
+    "dev": "mocha -w",
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
   "main": "index.js",
   "repository": {
