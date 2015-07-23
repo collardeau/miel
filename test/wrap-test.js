@@ -1,7 +1,7 @@
 "use strict";
 
 var should = require("chai").should();
-var compile = require("../../lib/wrap");
+var compile = require("../lib/wrap");
 
 describe("wraps code that is evoked by the special syntax", function () {
 

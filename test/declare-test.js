@@ -1,7 +1,7 @@
 "use strict";
 
 var should = require("chai").should();
-var declare = require("../../lib/declare");
+var declare = require("../lib/declare");
 
 var input = undefined,
     key = undefined;

@@ -9,9 +9,8 @@
   ],
   "author": "Thomas Collardeau <thomas@collardeau.com>",
   "scripts": {
-    "build-tests": "gulp build",
-    "test": "mocha test/lib",
-    "test-watch": "gulp watch"
+    "test": "mocha --reporter spec",
+    "dev": "mocha -w"
   },
   "main": "index.js",
   "repository": {
