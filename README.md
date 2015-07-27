@@ -1,5 +1,7 @@
 # Miel.js 
-[![Build Status](https://travis-ci.org/collardeau/miel.svg?branch=master)](https://travis-ci.org/collardeau/miel) 
+[![Build Status](https://travis-ci.org/collardeau/miel.svg?branch=master)](https://travis-ci.org/collardeau/miel)
+[![Coverage Status](https://coveralls.io/repos/collardeau/miel/badge.svg?branch=master&service=github)](https://coveralls.io/github/collardeau/miel?branch=master)
+
 [![Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/collardeau/miel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 A javaScript pre-loader to add indentation syntax, (a la Sass or CoffeeScript).
@@ -81,9 +83,13 @@ Miel does not touch semi-colons. You can have them in, or not, after {-} (and th
 
 "{-}" (wrapped in single or double quotes) will never be invoked.
 
-## Experimental: Smalltalk Variable Declaration 
+## Experimental
 
-Miel also recognizes a variable declaration using the Smalltalk type syntax ```:=```, and it will convert it to a ```var``` declaration.
+The following features are likely to change in the near future.
+
+### Variable Declaration 
+
+Miel recognizes a variable declaration using the Smalltalk type syntax ```:=```, and it will convert it to a ```var``` declaration.
 
 ```javascript
 syntax:= 'miel';
