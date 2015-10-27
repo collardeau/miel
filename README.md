@@ -21,7 +21,6 @@ function translate(word) {-}
     if (word === 'miel') {-}
         translation = 'honey'
     return translation
-
 ```
 compiles to:
 
@@ -53,14 +52,14 @@ The ```{-}``` syntax will wrap the code following it that is **more indented** t
 For example:
 
 ```javascript
-describe("works with indentation', () => {-});
+describe("works with indentation", () => {-});
     it('smartly knows when to wrap code');
 ```
 
 compiles to:
 
 ```javascript
-describe("works with indentation', () => {
+describe("works with indentation", () => {
     it('smartly knows when to wrap code');
 });
 ```
